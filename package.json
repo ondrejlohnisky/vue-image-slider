@@ -1,16 +1,25 @@
 {
-  "name": "image-slider",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@ondrejlohnisky/vue-image-slider",
+  "version": "0.1.8",
+  "description": "A vue-image-slider",
+  "author": "Ondřej Lohniský",
+  "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "build-bundle": "vue-cli-service build --target lib --name vueimageslider ./src/components/index.js"
   },
   "dependencies": {
+    "node-sass": "^4.10.0",
+    "sass-loader": "^7.1.0",
     "vue": "^2.5.17"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.8",
+    "@fortawesome/free-brands-svg-icons": "^5.5.0",
+    "@fortawesome/free-solid-svg-icons": "^5.5.0",
+    "@fortawesome/vue-fontawesome": "^0.1.2",
     "@vue/cli-plugin-babel": "^3.1.1",
     "@vue/cli-plugin-eslint": "^3.1.1",
     "@vue/cli-service": "^3.1.1",
@@ -22,7 +31,11 @@
   "eslintConfig": {
     "root": true,
     "env": {
-      "node": true
+      "node": true,
+      "browser": true,
+      "commonjs": true,
+      "es6": true,
+      "jquery": true
     },
     "extends": [
       "plugin:vue/essential",
@@ -42,5 +55,17 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
+  ],
+  "main": "./dist/vueimageslider.umd.min.js",
+  "unpkg": "./dist/vueimageslider.umd.min.js",
+  "browser": {
+    "./sfc": "./src/components/imageslider.vue"
+  },
+  "files": [
+    "dist/*",
+    "src/*",
+    "public/*",
+    "*.json",
+    "*.js"
   ]
 }
