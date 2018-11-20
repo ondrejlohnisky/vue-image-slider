@@ -3,6 +3,8 @@
 
 ## NPM
 ### https://www.npmjs.com/package/@ondrejlohnisky/vue-image-slider
+This is my simple library for slideshow based on Vue.js and JQuery
+required: JQuerry!!
 
 ## Installation
 ```
@@ -17,38 +19,18 @@ Vue.component('imageslider', imageslider);
 ```
 <template>
   <imageslider :images="images" :speed="1250" :interval="4250" :arrows="true" :controls="true" :stopOnHover="true" endingType="continue"/>
-
 </template>
 ```
 
 
 ##Props
 
-   arrows:{
-      type:Boolean,
-      default:true
-   },
-   controls:{
-      type:Boolean,
-      default:true
-   },
-   images: {
-      type: Array,
-      required: true
-   },
-   interval: {
-      type: Number,
-      default: 5000
-   },
-   speed: {
-      type: Number,
-      default: 1000
-   },
-   endingType: {
-      type: String,
-      default: 'continue'
-   },
-   stopOnHover: {
-      type: Boolean,
-      default: true
-   }
+|Prop            |Value                                                           |Description                                |Default       |
+|----------------|----------------------------------------------------------------|-------------------------------------------|--------------|
+|arrows          |`true/false`                                                    |Display arrows                             |`true`        |
+|controls        |`true/false`                                                    |Dispaly controlls                          |`true`        |
+|images          |`array of objects`                                              |Object consist of name,description and src |`required!`   |
+|interval        |`number` ms                                                     |speed of the interval                      |`5000`        |
+|speed           |`number` ms                                                     |speed of the slide                         |`1000`        |
+|endingType      |`'continue'/'rollback'`                                         |how is the ending of slideshow handled     |`continue`    |
+|stopOnHover     |`true/false`                                                    |stop when user hover over slider           |`true`        |
