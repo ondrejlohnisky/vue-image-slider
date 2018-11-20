@@ -10,7 +10,7 @@ required: JQuerry!!
 ```
 npm i @ondrejlohnisky/vue-image-slider
 ```
-##Usage
+## Usage
 ```
 import imageslider from '@ondrejlohnisky/vue-image-slider';
 Vue.component('imageslider', imageslider);
@@ -23,7 +23,7 @@ Vue.component('imageslider', imageslider);
 ```
 
 
-##Props
+## Props
 
 |Prop            |Value                                                           |Description                                |Default       |
 |----------------|----------------------------------------------------------------|-------------------------------------------|--------------|
