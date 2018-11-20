@@ -1,29 +1,54 @@
+
 # image-slider
 
-## Project setup
+## NPM
+### https://www.npmjs.com/package/@ondrejlohnisky/vue-image-slider
+
+## Installation
 ```
-npm install
+npm i @ondrejlohnisky/vue-image-slider
+```
+##Usage
+```
+import imageslider from '@ondrejlohnisky/vue-image-slider';
+Vue.component('imageslider', imageslider);
 ```
 
-### Compiles and hot-reloads for development
 ```
-npm run serve
+<template>
+  <imageslider :images="images" :speed="1250" :interval="4250" :arrows="true" :controls="true" :stopOnHover="true" endingType="continue"/>
+
+</template>
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
 
-### Run your tests
-```
-npm run test
-```
+##Props
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+   arrows:{
+      type:Boolean,
+      default:true
+   },
+   controls:{
+      type:Boolean,
+      default:true
+   },
+   images: {
+      type: Array,
+      required: true
+   },
+   interval: {
+      type: Number,
+      default: 5000
+   },
+   speed: {
+      type: Number,
+      default: 1000
+   },
+   endingType: {
+      type: String,
+      default: 'continue'
+   },
+   stopOnHover: {
+      type: Boolean,
+      default: true
+   }
