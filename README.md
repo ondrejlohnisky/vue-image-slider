@@ -1,6 +1,6 @@
 
 # image-slider
-###https://github.com/ondrejlohnisky/vue-image-slider
+### https://github.com/ondrejlohnisky/vue-image-slider
 
 ### https://www.npmjs.com/package/@ondrejlohnisky/vue-image-slider
 This is my simple library for slideshow based on Vue.js and JQuery
