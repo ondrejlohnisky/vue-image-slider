@@ -245,6 +245,7 @@
 
       },
       beforeDestroy() {
+         window.clearInterval(myInterval);
          window.removeEventListener('resize', this.initialize);
       }
 
